@@ -57,7 +57,7 @@ The data pipeline is designed to efficiently handle and analyze large-scale data
 Azure Data Factory (ADF) orchestrates the entire data pipeline, managing data ingestion, transformation, and movement between layers in Azure Data Lake Gen2. 
 
 ![Data Orchesttration](Azure_Data_Service_Screen/File%202.jpeg)
-
+![Data Orchesttration](Azure_Data_Service_Screen/File%202.jpeg)
 
 ### 5. Data Analysis with Synapse Analytics
 - An Azure Synapse Analytics resource is created and connected to the Gold container in Azure Data Lake Gen2.
@@ -70,6 +70,8 @@ Azure Data Factory (ADF) orchestrates the entire data pipeline, managing data in
 - The data is visualized through Power BI dashboards, providing insights into cyber security trends and patterns.
 
 ![viz1](Dashboards/Attacks_dashboard.png)
-
 ![viz2](Dashboards/comparaison_dashboard.png)
 
+## About 
+**Houda Moudni**
+**houdamoudni.01@gmail.com**
