@@ -1,5 +1,4 @@
 # Cyber Security Attacks Data Pipeline : MICROSOFT AZURE CLOUD SERVICES
-# Cyber Security Attacks Data Pipeline
 
 This project demonstrates a data pipeline for ingesting, processing, analyzing, and visualizing cyber security attack data using Microsoft Azure cloud services. The pipeline handles data ingestion from CSV files, processes and transforms it through various layers (Bronze, Silver, Gold) in Azure Data Lake Storage, and enables data analysis and visualization using Azure Synapse Analytics and Power BI.
 
