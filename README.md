@@ -9,8 +9,6 @@ This project demonstrates a data pipeline for ingesting, processing, analyzing, 
 - [Architecture](#architecture)
 - [Technologies Used](#technologies-used)
 - [Steps to Accomplish the Project](#steps-to-accomplish-the-project)
-- [Screenshots](#screenshots)
-- [License](#license)
 
 ## Overview
 
@@ -26,7 +24,7 @@ The data pipeline is designed to efficiently handle and analyze large-scale data
 3. **Data Analysis**: Data is analyzed in Azure Synapse Analytics.
 4. **Data Reporting**: Data visualization in Power BI.
 
-![Architecture Diagram](https://github.com/houda-moudni/Cyber-Security-Attacks-Data-Pipeline/blob/main/Azure_Data_pipeline.png)
+![Architecture Diagram](Azure_Data_pipeline.png)
 
 ## Technologies Used
 
@@ -47,17 +45,32 @@ The data pipeline is designed to efficiently handle and analyze large-scale data
 
 ### 2. Secure Storage of Secrets
 - Azure Key Vault is used to securely store the storage account's secret key, ensuring that sensitive information is protected.
+![Key Vaults](Azure_Data_Service_Screen/File%2012.jpeg)
 
 ### 3. Data Transformation and Cleaning
 - An Azure Databricks resource is created with a dedicated compute cluster.
 - Two notebooks are developed:
   - **Notebook 1**: Transforms and cleans the data, moving it from the Bronze layer to the Silver layer in Azure Data Lake Gen2.
   - **Notebook 2**: Aggregates the cleaned data from the Silver layer and stores it in the Gold layer for further analysis.
+    
+### 4. Data Orchestration with Azure Data Factory
 
-### 4. Data Analysis with Synapse Analytics
+Azure Data Factory (ADF) orchestrates the entire data pipeline, managing data ingestion, transformation, and movement between layers in Azure Data Lake Gen2. 
+
+![Data Orchesttration](Azure_Data_Service_Screen/File%202.jpeg)
+
+
+### 5. Data Analysis with Synapse Analytics
 - An Azure Synapse Analytics resource is created and connected to the Gold container in Azure Data Lake Gen2.
 - SQL queries are used within Synapse Analytics to analyze the aggregated data stored in the Gold layer.
 
-### 5. Data Visualization with Power BI
+![Synapse](synapse_analytics.png)
+
+### 6. Data Visualization with Power BI
 - Power BI is connected to the Gold container in Azure Data Lake Gen2.
 - The data is visualized through Power BI dashboards, providing insights into cyber security trends and patterns.
+
+![viz1](Dashboards/Attacks_dashboard.png)
+
+![viz2](Dashboards/comparaison_dashboard.png)
+
