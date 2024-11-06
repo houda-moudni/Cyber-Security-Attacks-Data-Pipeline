@@ -81,8 +81,10 @@ Azure Data Factory (ADF) orchestrates the entire data pipeline, managing data in
 ### 6. Data Visualization with Power BI
 - Power BI is connected to the Gold container in Azure Data Lake Gen2.
 - The data is visualized through Power BI dashboards, providing insights into cyber security trends and patterns.
-
+Dashboard 1:
 ![viz1](Dashboards/Attacks_dashboard.png)
+
+Dashboard 2:
 ![viz2](Dashboards/comparaison_dashboard.png)
 
 
