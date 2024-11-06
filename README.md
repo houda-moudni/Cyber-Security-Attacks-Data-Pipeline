@@ -7,7 +7,7 @@ This project demonstrates a data pipeline for ingesting, processing, analyzing, 
 - [Overview](#overview)
 - [Architecture](#architecture)
 - [Technologies Used](#technologies-used)
-- [Steps to Accomplish the Project](#steps-to-accomplish-the-project)
+- [Project Steps](#Project-Steps)
 
 ## Overview
 
@@ -36,7 +36,9 @@ The data pipeline is designed to efficiently handle and analyze large-scale data
   - Power BI
 - **Programming Languages**: Python, SQL
 
-## Steps to Accomplish the Project
+![Data Orchesttration](Azure_Data_Service_Screen/File%203.jpeg)
+
+## Project Steps
 
 ### 1. Data Ingestion
 - The CSV file containing cyber security attack data is stored in a GitHub repository.
@@ -44,9 +46,21 @@ The data pipeline is designed to efficiently handle and analyze large-scale data
 
 ### 2. Secure Storage of Secrets
 - Azure Key Vault is used to securely store the storage account's secret key, ensuring that sensitive information is protected.
+  
 ![Key Vaults](Azure_Data_Service_Screen/File%2012.jpeg)
 
 ### 3. Data Transformation and Cleaning
+#### Medallion Architecture Overview
+We use the Medallion architecture to organize data into three layers for efficient and scalable transformation:
+
+1. **Bronze**: Stores raw data directly from sources in its original format, enabling traceability.
+2. **Silver**: Holds cleaned and transformed data, removing duplicates and creating a consistent dataset.
+3. **Gold**: Contains aggregated data optimized for analytics, reporting, and business use cases.
+
+ ![Medallion architecture](Azure_Data_Service_Screen/File 4.jpeg)
+ 
+This structure in Azure Databricks ensures efficient data flow, clear lineage, and optimized analytics as data moves from raw ingestion to end-user-ready insights.
+
 - An Azure Databricks resource is created with a dedicated compute cluster.
 - Two notebooks are developed:
   - **Notebook 1**: Transforms and cleans the data, moving it from the Bronze layer to the Silver layer in Azure Data Lake Gen2.
@@ -56,7 +70,6 @@ The data pipeline is designed to efficiently handle and analyze large-scale data
 
 Azure Data Factory (ADF) orchestrates the entire data pipeline, managing data ingestion, transformation, and movement between layers in Azure Data Lake Gen2. 
 
-![Data Orchesttration](Azure_Data_Service_Screen/File%202.jpeg)
 ![Data Orchesttration](Azure_Data_Service_Screen/File%202.jpeg)
 
 ### 5. Data Analysis with Synapse Analytics
@@ -72,6 +85,8 @@ Azure Data Factory (ADF) orchestrates the entire data pipeline, managing data in
 ![viz1](Dashboards/Attacks_dashboard.png)
 ![viz2](Dashboards/comparaison_dashboard.png)
 
+
+
 ## About 
+For more information, feel free to contact me at **houdamoudni.01@gmail.com**.
 **Houda Moudni**
-**houdamoudni.01@gmail.com**
